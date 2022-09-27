@@ -291,7 +291,7 @@ module Clever
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] gender Object to be assigned
     def gender=(gender)
-      validator = EnumAttributeValidator.new('String', ["M", "F", ""])
+      validator = EnumAttributeValidator.new('String', ["M", "F", "X", ""])
       unless validator.valid?(gender)
         fail ArgumentError, "invalid value for 'gender', must be one of #{validator.allowable_values}."
       end
